@@ -1,0 +1,511 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Main Layout */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0B0C10;
+    color: white;
+    line-height: 1.6;
+}
+
+
+/* Styling for header section */
+header {
+    position: relative;
+    text-align: center;
+    background-color: #0B0C10;
+    color: white;
+    padding: 1em 1em;}
+
+.hamburger {
+    display: none;
+    /* Hide by default */
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    font-size: 1.8em;
+    color: #66FCF1;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+header h1 {
+    font-size: 4vw;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin: 0.2em 0;
+    color: #ffcc00;
+    /* Attractive color for the title */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 2s ease-out;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #fdffff;
+    /* Softer color for subtitle */
+    margin: 0.1em 0 1em 0;
+    animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling for Gradient-line */
+.gradient-line {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, #ff0000, #00ff3c, #ffffff, #8a2be2, #000000);
+    background-size: 500% 100%;
+    animation: slideGradient 90s ease infinite;
+}
+
+@keyframes slideGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Styling for Navbar Section */
+nav {
+    position: sticky;
+    top: 0;
+    background: #0B0C10;
+    z-index: 100;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    background: #121317;
+    padding: 0.5em;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    /* margin: 0px 10px; */
+    text-decoration: none;
+    padding: 0.5em 1em;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    /* background-color: #0B0C10; */
+    transform: scale(1.4);
+}
+
+/* Dropdown Menu Styling */
+.dropdown-content {
+    max-height: 0;
+    /* Start closed */
+    overflow: hidden;
+    transition: max-height 0.8s ease;
+    /* Smooth transition */
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 0.6em 1em;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: transform 0.3 ease, color 0.3 ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #1f1b1b;
+    transform: scale(1.2);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Open Class for the Dropdown */
+.dropdown-content.open {
+    max-height: 500px;
+    /* Set a high enough max-height */
+}
+
+.dropdown>a::after {
+    content: " ▼";
+    /* Unicode character for down arrow */
+    font-size: 0.8em;
+    color: #ccc;
+    /* Change color if needed */
+    margin-left: 5px;
+    /* Adds space between text and arrow */
+}
+
+/* About US */
+.about p {
+    margin: 0 10px;
+}
+.about, .history, .chefs, .reviews {
+    padding: 2em;
+    text-align: center;
+}
+
+.about h2, .history h2, .chefs h2, .reviews h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #ffffff;
+    animation: HeadingGlow 1.5s infinite alternate;
+}
+
+@keyframes HeadingGlow {
+    0% {
+        text-shadow: 0 0 10px #d3cfcf, 0 0 20px #d3cfcf, 0 0 30px #d3cfcf;
+    }
+
+    100% {
+        text-shadow: 0 0 20px #d3cfcf, 0 0 30px #d3cfcf, 0 0 40px #d3cfcf;
+    }
+}
+
+.history {
+    border-top: 2px solid white;
+    display: flex;
+    height: 400px;
+    width: 100%;
+    /* background-color: #0077B5; */
+    flex-wrap: wrap;
+}
+
+.left {
+    background-image: url('material for vinegar food/CEO.png');
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    width: 40%;
+    height: 300px;
+}
+
+
+.right {
+    width: 60%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.right p {
+    max-width: 500px;
+    color: #dcdcdc;
+}
+
+
+/* Styling for Chef */
+.chef-cards {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    flex-wrap: wrap;
+}
+
+.chef-card {
+    background-color: #1c1e22;
+    padding: 1.5em;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.chef-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+}
+
+.chef-card h3 {
+    color: #ffcc00;
+    margin-top: 0.5em;
+}
+
+.chef-card p {
+    color: #dcdcdc;
+    font-size: 0.9em;
+}
+
+/* Customer Reviews Section */
+.review-cards {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    flex-wrap: wrap;
+    margin-top: 1em;
+}
+
+.review-card {
+    background-color: #1c1e22;
+    padding: 1.5em;
+    width: 250px;
+    text-align: center;
+    color: #dcdcdc;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.review-card p {
+    font-size: 1em;
+    font-style: italic;
+}
+
+.review-card h4 {
+    color: #ffcc00;
+    margin-top: 1em;
+}
+
+footer {
+    border-top: 2px solid white;
+    background-color: #040a10;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    color: #ffcc00;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-column p,
+.footer-column li {
+    margin-bottom: 10px;
+    color: #aaa;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Social Media Icons */
+.social-icons a {
+    /* color: #070909; */
+    font-size: 1.2em;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.fa-facebook-f {
+    color: #4267B2;
+}
+
+.fa-twitter {
+    color: #1DA1F2;
+}
+
+.fa-instagram {
+    color: #FD1D1D;
+}
+
+.fa-linkedin {
+    color: #0077B5;
+}
+
+.social-icons a:hover {
+    color: #ffcc00;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+    color: #aaa;
+    font-size: 0.9em;
+}
+
+
+
+/* Viewport meta tag is already set in HTML */
+
+/* Base styles remain unchanged */
+
+/* Media Query for Small Screens (Tablets and Mobile) */
+@media (max-width: 856px) {
+    /* Adjust header title font size */
+    header h1 {
+        font-size: 6vw;
+    }
+
+    /* Display hamburger menu on smaller screens */
+    .hamburger {
+        display: block;
+    }
+
+    /* Hide the navbar links initially */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Toggle display for open state */
+    nav ul.show {
+        display: flex;
+    }
+
+    /* Full width dropdown items */
+    nav ul li a {
+        display: block;
+        text-align: center;
+        padding: 0.8em;
+    }
+
+    /* Ensure dropdown content is full-width */
+    .dropdown-content {
+        position: relative;
+        width: 100%;
+        max-height: none;
+        display: none; /* Hide by default */
+    }
+
+    /* Show dropdown content when parent is active */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .history {
+        flex-direction: column; /* Stack the items vertically on small screens */
+        height: auto;
+    }
+
+    .left {
+        width: 100%;
+        height: 300px;
+    }
+
+    .right {
+        width: 100%; 
+        height: auto; 
+        margin-top: 20px;
+    
+    /* History Section */
+    .history-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Chef Cards and Review Cards */
+    .chef-cards, .review-cards {
+        flex-direction: column;
+    }
+
+    .chef-card, .review-card {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    /* Footer layout */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        width: 100%;
+        text-align: center;
+    }
+
+    .social-icons a {
+        margin: 0 10px;
+    }
+}
+
+/* Additional adjustments for Extra Small Screens (Mobile Phones) */
+@media (max-width: 480px) {
+    /* Further decrease header title font size */
+    header h1 {
+        font-size: 7vw;
+    }
+
+    /* Adjust font sizes in sections */
+    .category h2 {
+        font-size: 1.8em;
+    }
+
+    /* Reduce padding for sections */
+    /* .about, .history, .chefs, .reviews {
+        padding: 1.5em;
+    } */
+
+    /* Resize footer text */
+    .footer-column h3 {
+        font-size: 1.1em;
+    }
+
+    .footer-bottom p {
+        font-size: 0.8em;
+    }
+}
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinegar Food</title>
+    <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Vinegar Food</h1>
+        <p>Your go-to spot for delicious meals!</p>
+    </header>
+
+    <!-- Gradient-line -->
+    <div class="gradient-line"></div>
+
+    <!-- Navigation bar -->
+    <nav>
+        <button class="hamburger" onclick="toggleMenu()">☰</button> <!-- Hamburger icon -->
+        <ul>
+            <li><a href="index2.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+
+            <!-- Dropdown Menu for Meals -->
+            <li class="dropdown">
+                <a href="meals.html" onmouseover="toggleDropdown(event)">Meals</a>
+                <div class="dropdown-content">
+                    <a href="meals.html#regular">Regular</a>
+                    <a href="meals.html#lunch">Lunch</a>
+                    <a href="meals.html#snacks">Snacks</a>
+                    <a href="meals.html#desserts">Desserts</a>
+                    <a href="meals.html#beverages">Beverages</a>
+                </div>
+            </li>
+
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#catering">Catering</a></li>
+            <li><a href="#recipe">Recipe of the Month</a></li>
+            <li><a href="D:\vinegar foods\contact.html">Contact Us</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+        </ul>
+    </nav>
+    <div class="gradient-line"></div>
+    <div class="main-content">
+        <!-- Two-Column Section Below Navigation -->
+        <div class="content-section">
+            <!-- Left Column: Text Description -->
+            <div class="text-description">
+                <h2>With<span id="GreatFood"> Great Food </span>Comes<span id="GreatFlavor"> Great Flavor!</span></h2>
+                <p id="description-text">A meaty rice dish, plov comes in more than 60 varieties and is one of Uzbek
+                    cuisine's most beloved staples. These days, it's usually made by layering up a base of eggs, flour,
+                    butter and yogurt with steamed long grain rice, then adding toppings like meat, dried fruit, fresh
+                    herbs, fish, vegetables and spices. However, in its most basic form, plov is simply rice with
+                    onions, carrots and a meat like mutton or lamb – and its history can be traced back more than 1,000
+                    years.</p>
+            </div>
+
+            <!-- Right Column: Slider -->
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="material for vinegar food/slider1.jpg" alt="Delicious meal 1">
+                    </div>
+                    <div class="slide">
+                        <img src="material for vinegar food/slider2.jpg" alt="Delicious meal 2">
+                    </div>
+                    <div class="slide">
+                        <img src="material for vinegar food/slider3.jpg" alt="Delicious meal 3">
+                    </div>
+                    <div class="slide">
+                        <img src="material for vinegar food/slider4.jpg" alt="Delicious meal 3">
+                    </div>
+                    <div class="slide">
+                        <img src="material for vinegar food/slider5.jpg" alt="Delicious meal 3">
+                    </div>
+                </div>
+                <button class="prev" id="SliderButton" onclick="moveSlides(-1)">❮</button>
+                <button class="next" id="SliderButton" onclick="moveSlides(1)">❯</button>
+            </div>
+        </div>
+
+        <!-- Trending on Vinegar Food Section -->
+        <section id="trending">
+            <h2>Trending on <span class="trending-heading">Vinegar Food</span></h2>
+            <div class="trending-cards">
+                <div class="card">
+                    <a href="meals.html#beans"><img src="material for vinegar food/regular8KidneyBeanswithrice.jpg" alt="Dish 1"></a>
+                    <p>Beans With Rice</p>
+                </div>
+                <div class="card">
+                    <a href="meals.html#biryani"><img src="material for vinegar food/lunch1Biryani.jpg" alt="Dish 2"></a>
+                    <p>Biryani</p>
+                </div>
+                <div class="card">
+                    <a href="meals.html#chana"><img src="material for vinegar food/snack3chanachaat.jpeg" alt="Dish 3"></a>
+                    <p>Chana Chaat</p>
+                </div>
+                <div class="card">
+                    <a href="meals.html#pizza"><img src="material for vinegar food/regular2pizza.jpg" alt="Dish 4"></a>
+                    <p>Pizza</p>
+                </div>
+                <div class="card">
+                    <a href="meals.html#chilli"><img src="material for vinegar food/regular10ChiliNoodles.jpg" alt="Dish 5"></a>
+                    <p>Chilli Noodles</p>
+                </div>
+                <div class="card">
+                    <a href="meals.html#kebab"><img src="material for vinegar food/lunch11seekhkabab.jpg" alt="Dish 6"></a>
+                    <p>Seekh Kebab</p>
+                </div>
+                <div class="card">
+                    <a href="meals.html#falooda"><img src="material for vinegar food/desert5falooda.jpg" alt="Dish 7"></a>
+                    <p>Falooda</p>
+                </div>
+                <div class="card">
+                    <a href="meals.html#water"><img src="material for vinegar food/bev4coconutwater.jpg" alt="Dish 8"></a>
+                    <p>Coconut Water</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sign-In to Get More Updates Section -->
+        <section id="sign-up">
+            <h2>Sign In to Get More Updates & Offers</h2>
+            <p>Sign in to receive exclusive offers, discounts, and the latest food trends directly to your inbox!</p>
+            <form action="#" method="POST">
+                <input type="email" placeholder="Enter your email" required>
+                <button class="Sign-inButton" type="submit">Sign In</button>
+            </form>
+        </section>
+
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <p>Discover the best flavors from around the world. We’re dedicated to serving you unforgettable dining
+                    experiences.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index2.html">Home</a></li>
+                    <li><a href="meals.html">Meals</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Flavor St, Food City, FL 45678</p>
+                <p><i class="fas fa-phone-alt"></i> (123) 456-7890</p>
+                <p><i class="fas fa-envelope"></i> contact@yourwebsite.com</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 YourWebsite. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- Success Popup Modal -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p>You've successfully signed in!</p>
+            <button onclick="closePopup()">OK</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<h<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinegar Food</title>
+    <link rel="stylesheet" href="meals.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+
+    <body>
+        <!-- Header Section -->
+        <header>
+            <h1>Vinegar Food</h1>
+            <p>Your go-to spot for delicious meals!</p>
+        </header>
+
+        <!-- Gradient-line -->
+        <div class="gradient-line"></div>
+
+        <!-- Navigation bar -->
+        <nav>
+            <button class="hamburger" onclick="toggleMenu()">☰</button> <!-- Hamburger icon -->
+            <ul>
+                <li><a href="index2.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+
+                <!-- Dropdown Menu for Meals -->
+                <li class="dropdown">
+                    <a href="meals.html" onmouseover="toggleDropdown(event)">Meals</a>
+                    <div class="dropdown-content">
+                        <a href="#regular">Regular</a>
+                        <a href="#lunch">Lunch</a>
+                        <a href="#snacks">Snacks</a>
+                        <a href="#desserts">Desserts</a>
+                        <a href="#beverages">Beverages</a>
+                    </div>
+                </li>
+
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#awards">Awards</a></li>
+                <li><a href="#catering">Catering</a></li>
+                <li><a href="#recipe">Recipe of the Month</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+            </ul>
+        </nav>
+        <div class="gradient-line"></div>
+
+        <main>
+
+            <!-- Regular Category -->
+            <section id="regular" class="category">
+                <h2>Regular</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <img src="material for vinegar food/regular1pasta.jpg" alt="Item Name">
+                        <h3>Pasta</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+                    
+                    <div class="card">
+                        <img src="material for vinegar food/regular2pizza.jpg" alt="Item Name">
+                        <h3 >Pizza</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+                    
+                    <div class="card">
+                        <img src="material for vinegar food/regular3hamburger.jpg" alt="Item Name">
+                        <h3>Hamburger</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/regular3roastchicken.jpg" alt="Item Name">
+                        <h3 id="beans">Roast Chicken</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/regular5macaroni.jpg" alt="Item Name">
+                        <h3 >Macaroni</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/regular6grilledcheesesandwich.jpg" alt="Item Name">
+                        <h3 id="chilli" >Grilled Sandwich</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/regular7BeefTacos.jpg" alt="Item Name">
+                        <h3>Classic Beef Tacos</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/regular8KidneyBeanswithrice.jpg" alt="Item Name">
+                        <h3>Beans with Rice</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/regular9ChickenEnchiladas.jpg" alt="Item Name">
+                        <h3>Chicken Enchiladas</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/regular10ChiliNoodles.jpg" alt="Item Name">
+                        <h3 id="biryani">Chilli Noodles</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Lunch Category -->
+            <section id="lunch" class="category">
+                <h2>Lunch</h2>
+                <div class="card-container"> <!-- Start card-container -->
+                    <div class="card">
+                        <img src="material for vinegar food/lunch1Biryani.jpg" alt="Item Name">
+                        <h3 >Biryani</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/lunch2simplechickenkarahi.jpg" alt="Item Name">
+                        <h3>Chicken Karahi</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/lunch3beefkofta.jpg" alt="Item Name">
+                        <h3>Beef kofta</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/lunch4nihari.jpg" alt="Item Name">
+                        <h3>Nihari</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/lunch5Saag.jpeg" alt="Item Name">
+                        <h3>Saag</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/lunch6chaplikabab.jpg" alt="Item Name">
+                        <h3>Chapli Kabab</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/lunch7pulao.jpg" alt="Item Name">
+                        <h3>Pulao</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/lunch8Daal.jpeg" alt="Item Name">
+                        <h3>Daal</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/lunch9Korma.jpeg" alt="Item Name">
+                        <h3>Korma</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/lunch10Chole.jpg" alt="Item Name">
+                        <h3>Chole</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/lunch11seekhkabab.jpg" alt="Item Name">
+                        <h3 id="kebab">Seekh Kebab</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/lunch12chickncurry.jpg" alt="Item Name">
+                        <h3>Chicken Curry</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/lunch13aloogosht.jpg" alt="Item Name">
+                        <h3>Aloo Gosht</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/lunch14golakabab.jpg" alt="Item Name">
+                        <h3>Gola Kebab</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/lunch15AlooKeema.jpg" alt="Item Name">
+                        <h3 id="chana">Aloo Keema</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+                </div> <!-- End card-container -->
+            </section>
+
+            <!-- Snacks Category -->
+            <section id="snacks" class="category">
+                <h2>Snacks</h2>
+                <div class="card-container"> <!-- Start card-container -->
+                    <div class="card">
+                        <img src="material for vinegar food/snack1Samosa.jpg" alt="Item Name">
+                        <h3>Samosa</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/snack2pakorathali.jpg" alt="Item Name">
+                        <h3>Pakora Thali</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/snack3chanachaat.jpeg" alt="Item Name">
+                        <h3 >Chana Chaat</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/snack4bunkebab.jpg" alt="Item Name">
+                        <h3>Bun Kebab</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/snack5alootikki.jpg" alt="Item Name">
+                        <h3>Aloo Tikki</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/snack6golgappa.jpg" alt="Item Name">
+                        <h3>Gol Gappe</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/snack7frenchfries.jpeg" alt="Item Name">
+                        <h3>French Fries</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/snack8dahibhalle.jpg" alt="Item Name">
+                        <h3>Dahi Bhalle</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/snack9khastakachori.jpg" alt="Item Name">
+                        <h3>Khasta Kachori</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/snack10fruitchaat.jpg" alt="Item Name">
+                        <h3>Fruit Chaat</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+                </div> <!-- End card-container -->
+            </section>
+
+            <!-- Desserts Category -->
+            <section id="desserts" class="category">
+                <h2>Desserts</h2>
+                <div class="card-container"> <!-- Start card-container -->
+                    <div class="card">
+                        <img src="material for vinegar food/desert1gulabjamun.jpg" alt="Item Name">
+                        <h3>Gulab Jamun</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/desert2kheer.jpg" alt="Item Name">
+                        <h3>Kheer</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/desert3barfi.jpeg" alt="Item Name">
+                        <h3>Barfi</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/desert4rasmalai.jpg" alt="Item Name">
+                        <h3>Ras Malai</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/desert5falooda.jpg" alt="Item Name">
+                        <h3 id="falooda">Falooda</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+                </div> <!-- End card-container -->
+            </section>
+
+            <!-- Beverages Category -->
+            <section id="beverages" class="category">
+                <h2>Beverages</h2>
+                <div class="card-container"> <!-- Start card-container -->
+                    <div class="card">
+                        <img src="material for vinegar food/bev1milkTea.jpg" alt="Item Name">
+                        <h3>Milk Tea</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/bev3sweetlassi.jpg" alt="Item Name">
+                        <h3>Sweet Lassi</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/bev2greentea.jpg" alt="Item Name">
+                        <h3>Green Tea</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/bev4coconutwater.jpg" alt="Item Name">
+                        <h3 id="water">Coconut Water</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/bev5mintmargarita.jpg" alt="Item Name">
+                        <h3>Mint Margarita</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/bev6grapejuice.jpg" alt="Item Name">
+                        <h3>Grape Juice</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/bev7dateshake.jpg" alt="Item Name">
+                        <h3>Date Shake</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/bev8almondmilk.jpeg" alt="Item Name">
+                        <h3>Almond Milk</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/bev9tamarind juice.jpg" alt="Item Name">
+                        <h3>Tarmarind Juice</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="material for vinegar food/bev10Sweet Lemonade.jpg" alt="Item Name">
+                        <h3>Sweet Lemonade</h3>
+                        <div class="quantity-selector">
+                            <button class="quantity-button" onclick="decrement(this)">−</button>
+                            <span class="quantity-number">1</span> <!-- Display the quantity here -->
+                            <button class="quantity-button" onclick="increment(this)">+</button>
+                        </div>
+                        <button class="add-button">Add to Bucket</button>
+                    </div>
+                </div> <!-- End card-container -->
+            </section>
+        </main>
+
+        <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <p>Discover the best flavors from around the world. We’re dedicated to serving you unforgettable dining
+                    experiences.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index2.html">Home</a></li>
+                    <li><a href="meals.html">Meals</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Flavor St, Food City, FL 45678</p>
+                <p><i class="fas fa-phone-alt"></i> (123) 456-7890</p>
+                <p><i class="fas fa-envelope"></i> contact@yourwebsite.com</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 YourWebsite. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    </body>
+
+    <script src="meals.js"></script>
+
+    </html>

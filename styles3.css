@@ -1,0 +1,638 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Main Layout */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #0B0C10;
+}
+
+
+/* Styling for header section */
+header {
+    position: relative;
+    text-align: center;
+    background-color: #0B0C10;
+    color: white;
+    padding: 1em 1em;
+}
+
+.hamburger {
+    display: none;
+    /* Hide by default */
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    font-size: 1.8em;
+    color: #66FCF1;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+header h1 {
+    font-size: 4vw;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin: 0.2em 0;
+    color: #ffcc00;
+    /* Attractive color for the title */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 2s ease-out;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #fdffff;
+    /* Softer color for subtitle */
+    margin: 0.1em 0 1em 0;
+    animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling for Gradient-line */
+.gradient-line {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, #ff0000, #00ff3c, #ffffff, #8a2be2, #000000);
+    background-size: 500% 100%;
+    animation: slideGradient 90s ease infinite;
+}
+
+@keyframes slideGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Styling for Navbar Section */
+nav {
+    position: sticky;
+    top: 0;
+    background: #0B0C10;
+    z-index: 100;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    background: #121317;
+    padding: 0.5em;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    /* margin: 0px 10px; */
+    text-decoration: none;
+    padding: 0.5em 1em;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    /* background-color: #0B0C10; */
+    transform: scale(1.4);
+}
+
+/* Dropdown Menu Styling */
+.dropdown-content {
+    max-height: 0;
+    /* Start closed */
+    overflow: hidden;
+    transition: max-height 0.8s ease;
+    /* Smooth transition */
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 0.6em 1em;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: transform 0.3 ease, color 0.3 ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #1f1b1b;
+    transform: scale(1.2);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Open Class for the Dropdown */
+.dropdown-content.open {
+    max-height: 500px;
+    /* Set a high enough max-height */
+}
+
+.dropdown>a::after {
+    content: " ▼";
+    /* Unicode character for down arrow */
+    font-size: 0.8em;
+    color: #ccc;
+    /* Change color if needed */
+    margin-left: 5px;
+    /* Adds space between text and arrow */
+}
+
+/* Slider Styling */
+.slider {
+    width: 60%;
+    /* Adjust to match the left text side */
+    height: 500px;
+    /* Adjust height as needed */
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    /* Added rounded corners to images */
+}
+
+/* Two-column Layout Section */
+.content-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#GreatFood,
+#GreatFlavor {
+    color: #ff6600;
+    /* Accent color */
+    font-weight: bold;
+    animation: textGlow 1.5s infinite alternate;
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 10px #ff6600, 0 0 20px #ff6600, 0 0 30px #ff6600;
+    }
+
+    100% {
+        text-shadow: 0 0 20px #ff6600, 0 0 30px #ff6600, 0 0 40px #ff6600;
+    }
+}
+
+.text-description {
+    width: 40%;
+    /* Adjust to give space for the slider */
+    padding: 20px;
+}
+
+.text-description h2 {
+    font-size: 2em;
+    color: #ffffff;
+    animation: H2Glow 1.5s infinite alternate;
+
+}
+
+@keyframes H2Glow {
+    0% {
+        text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+    }
+
+    100% {
+        text-shadow: 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff;
+    }
+}
+
+.text-description p {
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+/* Styling for navigation buttons */
+#SliderButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2em;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Optional: Add hover effect for buttons */
+#SliderButton:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Trending Section Styling */
+#trending {
+    text-align: center;
+    /* margin: 50px 0; */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 40px 0;
+    text-align: center;
+}
+
+#trending h2 {
+    font-size: 2.5em;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-top: 100px;
+    /* margin-bottom: 20px; */
+}
+
+.trending-heading {
+    color: #ff6600;
+    margin-top: 100px;
+    margin-bottom: 20px;
+
+}
+
+/* Styling for Trending Food Cards */
+.trending-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+.card {
+    width: 300px;
+    height: 225px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card p {
+    text-align: center;
+    padding: 10px;
+    font-size: 1.1em;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Adjust background for contrast */
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    /* Ensure text spans full width of the card */
+    bottom: 0;
+    /* Position it at the bottom of the card */
+    left: 0;
+}
+
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+/* Sign In Section Styling */
+#sign-up {
+    background-color: #000000;
+    padding: 40px 20px;
+    text-align: center;
+    margin: 60px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#sign-up h2 {
+    font-size: 2em;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#sign-up p {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+#sign-up form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#sign-up input {
+    width: 300px;
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#sign-up input:focus {
+    border-color: #ff6600;
+}
+
+.Sign-inButton {
+    color: white;
+    background-color: #ff6600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+#sign-up button:hover {
+    background-color: #ff5500;
+}
+
+footer {
+    border-top: 2px solid white;
+    background-color: #040a10;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    color: #ffcc00;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-column p,
+.footer-column li {
+    margin-bottom: 10px;
+    color: #aaa;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Social Media Icons */
+.social-icons a {
+    /* color: #070909; */
+    font-size: 1.2em;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.fa-facebook-f {
+    color: #4267B2;
+}
+
+.fa-twitter {
+    color: #1DA1F2;
+}
+
+.fa-instagram {
+    color: #FD1D1D;
+}
+
+.fa-linkedin {
+    color: #0077B5;
+}
+
+.social-icons a:hover {
+    color: #ffcc00;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+    color: #aaa;
+    font-size: 0.9em;
+}
+
+
+/* Popup Modal */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.popup.success {
+    border: 2px solid green;
+}
+
+.popup.error {
+    border: 2px solid red;
+}
+
+.popup .popup-content p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.popup button {
+    padding: 8px 20px;
+    font-size: 1em;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 856px) {
+
+    /* Make the content stack vertically on smaller screens */
+    .content-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-description {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .slider {
+        width: 100%;
+        height: 600px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* Adjust font sizes for better readability */
+    header h1 {
+        font-size: 5vw;
+    }
+
+    header p {
+        font-size: 1.2em;
+    }
+
+    .trending-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Further adjustments for very small screens */
+    header h1 {
+        font-size: 6vw;
+    }
+
+    .slider {
+        height: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* For mobile devices, display 1 column */
+    .trending-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 996px) {
+    
+}
+
+  

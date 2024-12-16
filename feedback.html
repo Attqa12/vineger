@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles3.css">
+    <title>Feedback Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Main Layout */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #0B0C10;
+}
+
+
+        header {
+    position: relative;
+    text-align: center;
+    background-color: #0B0C10;
+    color: white;
+    padding: 1em 1em;
+}
+
+.hamburger {
+    display: none;
+    /* Hide by default */
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    font-size: 1.8em;
+    color: #eb8e15;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+header h1 {
+    font-size: 4vw;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin: 0.2em 0;
+    color: #ffcc00;
+    /* Attractive color for the title */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 2s ease-out;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #fdffff;
+    /* Softer color for subtitle */
+    margin: 0.1em 0 1em 0;
+    animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling for Gradient-line */
+.gradient-line {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, #ff0000, #00ff3c, #ffffff, #8a2be2, #000000);
+    background-size: 500% 100%;
+    animation: slideGradient 90s ease infinite;
+}
+
+@keyframes slideGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Styling for Navbar Section */
+nav {
+    position: sticky;
+    top: 0;
+    background: #0B0C10;
+    z-index: 100;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    background: #121317;
+    padding: 0.5em;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    /* margin: 0px 10px; */
+    text-decoration: none;
+    padding: 0.5em 1em;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    /* background-color: #0B0C10; */
+    transform: scale(1.4);
+}
+
+/* Dropdown Menu Styling */
+.dropdown-content {
+    max-height: 0;
+    /* Start closed */
+    overflow: hidden;
+    transition: max-height 0.8s ease;
+    /* Smooth transition */
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 0.6em 1em;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: transform 0.3 ease, color 0.3 ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #1f1b1b;
+    transform: scale(1.2);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Open Class for the Dropdown */
+.dropdown-content.open {
+    max-height: 500px;
+    /* Set a high enough max-height */
+}
+
+.dropdown>a::after {
+    content: " ▼";
+    /* Unicode character for down arrow */
+    font-size: 0.8em;
+    color: #ccc;
+    /* Change color if needed */
+    margin-left: 5px;}
+
+        .feedback-container {
+            display: flex;
+            width: 100%;
+            margin-left: 3%;
+            background: #ffffff; /* Slightly lighter dark background */
+            border-radius: 15px;
+            overflow: hidden; /* For rounded corners */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .left-section {
+            flex: 1;
+            background: url('file:///D:/vinegar%20foods/material%20for%20vinegar%20food/karachi%20branch.jpg') center/cover no-repeat;
+            filter: brightness(0.7);
+            display: none; /* For smaller screens */
+            ;
+        }
+
+        .right-section {
+            flex: 1;
+            padding: 40px;
+            background: #0B0C10; /* Slightly lighter than the body */
+            display: flex;
+        
+            justify-content: center;
+            align-items: center;
+        }
+
+        .feedback-form {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .feedback-form h3 {
+            color: #ffffff; /* Golden yellow heading */
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-control, .form-select {
+            background: #ffffff;
+            color: #000000;
+            border: 1px solid #0B0C10;
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: #ffc107;
+            box-shadow: 0 0 5px #ffc107;
+        }
+
+        .emoji-rating {
+            display: flex;
+            justify-content: space-around;
+            font-size: 1.5rem;
+            margin: 15px 0;
+        }
+
+        .emoji-rating span {
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .emoji-rating span:hover {
+            transform: scale(1.3);
+        }
+
+        .btn-submit {
+            background: #ffc107;
+            color: black;
+            border: none;
+            width: 100%;
+            padding: 10px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-submit:hover {
+            background: #e0a800;
+            transform: scale(1.05);
+        }
+
+        @media (min-width: 768px) {
+            .feedback-container {
+                flex-direction: row;
+            }
+
+            .left-section {
+                display: block;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .feedback-container {
+                flex-direction: column;
+            }
+        }
+        footer {
+    border-top: 2px solid white;
+    background-color: #040a10;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    color: #ffcc00;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-column p,
+.footer-column li {
+    margin-bottom: 10px;
+    color: #aaa;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Social Media Icons */
+.social-icons a {
+    /* color: #070909; */
+    font-size: 1.2em;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.fa-facebook-f {
+    color: #4267B2;
+}
+
+.fa-twitter {
+    color: #1DA1F2;
+}
+
+.fa-instagram {
+    color: #FD1D1D;
+}
+
+.fa-linkedin {
+    color: #0077B5;
+}
+
+.social-icons a:hover {
+    color: #ffcc00;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+    color: #aaa;
+    font-size: 0.9em;
+}
+
+    </style>
+</head>
+<body>
+        <!-- Header Section -->
+        <header>
+            <h1>Vinegar Food</h1>
+            <p>Your go-to spot for delicious meals!</p>
+        </header>
+      
+        <!-- Gradient-line -->
+        <div class="gradient-line"></div>
+      
+        <!-- Navigation bar -->
+        <nav>
+            <button class="hamburger" onclick="toggleMenu()">☰</button> <!-- Hamburger icon -->
+            <ul>
+                <li><a href="D:\vinegar foods\index2.html">Home</a></li>
+                <li><a href="D:\vinegar foods\aboutus.html">About Us</a></li>
+      
+                <!-- Dropdown Menu for Meals -->
+                <li class="dropdown">
+                    <a href="meals.html" onmouseover="toggleDropdown(event)">Meals</a>
+                    <div class="dropdown-content">
+                        <a href="meals.html#regular">Regular</a>
+                        <a href="meals.html#lunch">Lunch</a>
+                        <a href="meals.html#snacks">Snacks</a>
+                        <a href="meals.html#desserts">Desserts</a>
+                        <a href="meals.html#beverages">Beverages</a>
+                    </div>
+                </li>
+      
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#awards">Awards</a></li>
+                <li><a href="#catering">Catering</a></li>
+                <li><a href="#recipe">Recipe of the Month</a></li>
+                <li><a href="D:\vinegar foods\contact.html">Contact Us</a></li>
+                <li><a href="D:\vinegar foods\feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+
+<div class="feedback-container">
+    <!-- Left Section -->
+    <div class="left-section"></div>
+
+    <!-- Right Section -->
+    <div class="right-section">
+        <div class="feedback-form">
+            <h3>We Value Your Feedback</h3>
+            <form>
+                <!-- Name -->
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                </div>
+
+                <!-- Email -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                </div>
+
+                <!-- Feedback Type -->
+                <div class="mb-3">
+                    <label for="feedbackType" class="form-label">Feedback Type</label>
+                    <select class="form-select" id="feedbackType" required>
+                        <option value="" disabled selected>Select feedback type</option>
+                        <option value="query">Query</option>
+                        <option value="suggestion">Suggestion</option>
+                        <option value="complaint">Complaint</option>
+                    </select>
+                </div>
+
+
+                <!-- Message -->
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Write your feedback here" required></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+</div>
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>About Us</h3>
+            <p>Discover the best flavors from around the world. We’re dedicated to serving you unforgettable dining
+                experiences.</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index2.html">Home</a></li>
+                <li><a href="meals.html">Meals</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Contact Info</h3>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Flavor St, Food City, FL 45678</p>
+            <p><i class="fas fa-phone-alt"></i> (123) 456-7890</p>
+            <p><i class="fas fa-envelope"></i> contact@yourwebsite.com</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 YourWebsite. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
